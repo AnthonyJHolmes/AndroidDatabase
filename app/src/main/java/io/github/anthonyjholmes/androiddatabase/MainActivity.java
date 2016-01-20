@@ -27,8 +27,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        DatabaseConnection db = new DatabaseConnection();
+        int id2 =  db.setup();
+        String id = Integer.toString(id2);
         TextView test = (TextView) findViewById(R.id.textView2);
-        test.setText("New text stuff");
+        test.setText(id);
     }
 
     @Override
